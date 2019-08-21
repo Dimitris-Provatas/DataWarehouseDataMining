@@ -2,8 +2,6 @@
 @author: Dimitris Provatas
 """
 
-#Data mining
-
 #initialise strins with the file names to avoid confusion and save time
 test = 'test.arff'
 train = 'train.arff'
@@ -14,4 +12,10 @@ from io import StringIO
 
 
 #reads the data
-data, meta= arff.loadarff(StringIO(test))
+data, meta = arff.loadarff(StringIO(train))
+
+'''
+preproccessing
+'''
+
+#
