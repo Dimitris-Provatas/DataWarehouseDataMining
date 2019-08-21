@@ -1,10 +1,17 @@
+"""
+@author: Dimitris Provatas
+"""
+
 #Data mining
 
-#opens and reads (argument 'r') the files
-testFile = open('test.arff', 'r')
-trainFile = open('train.arff', 'r')
+#initialise strins with the file names to avoid confusion and save time
+test = 'test.arff'
+train = 'train.arff'
 
-#makes a list of all the contents of the files, splits on lines
-listOfTest = testFile.read().splitlines()
-listofTrain = trainFile.read().splitlines()
+#imports
+from scipy.io import arff
+from io import StringIO
 
+
+#reads the data
+data, meta= arff.loadarff(StringIO(test))
