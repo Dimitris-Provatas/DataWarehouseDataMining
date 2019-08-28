@@ -15,6 +15,10 @@ if __name__ == '__main__':
     input_file = None
     args, _ = getopt.getopt(sys.argv[1:], "i:o:")
 
+    for o, a in args:
+        if o == '-i' and a:
+            input_file = a
+
     if not input_file:
         print("Usage: %s -i \"input_file.csv\"" % sys.argv[0])
         exit(0)
